@@ -1,44 +1,264 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <title>Avantaj Service Insurance</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avantaj Service Insurance</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+    header img {
+      max-width: 150px;
+    }
+    h1 {
+      margin: 10px 0 5px 0;
+    }
+    nav {
+      background: #0055a5;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    h2 {
+      border-bottom: 2px solid #0055a5;
+      padding-bottom: 5px;
+      color: #003366;
+    }
+    /* Contact info */
+    .contact-info p {
+      font-size: 1.1em;
+      margin: 6px 0;
+    }
+    .contact-info a {
+      color: #003366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    /* Formular */
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    form button {
+      margin-top: 15px;
+      padding: 12px 20px;
+      background-color: #0055a5;
+      border: none;
+      color: white;
+      font-size: 1.1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #003366;
+    }
+    /* Recenzii */
+    .reviews blockquote {
+      font-style: italic;
+      color: #555;
+      border-left: 4px solid #0055a5;
+      margin: 10px 0 20px 0;
+      padding-left: 15px;
+    }
+    /* WhatsApp floating button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      z-index: 1000;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .whatsapp-button:hover {
+      background-color: #1ebe57;
+    }
+    .whatsapp-button img {
+      width: 35px;
+      height: 35px;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 10px 0;
+      }
+    }
+    /* Google Maps container */
+    .map-container {
+      width: 100%;
+      height: 300px;
+      margin-top: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Avantaj Service Insurance</h1>
-        <p>Daune auto | Tractare gratuită | Mașină la schimb</p>
-    </header>
 
-    <section id="despre">
-        <h2>Despre noi</h2>
-        <p>Situat în Comuna Bărcănești, sat Tătărani, oferim servicii profesionale de constatări și reparații daune auto.</p>
-    </section>
+<header>
+  <!-- Logo ca imagine de intro -->
+  <img src="logo-avantajservice.png" alt="Avantaj Service Insurance Logo" />
+  <h1>Avantaj Service Insurance</h1>
+  <p>Service auto - Daune auto - Tractare gratuită - Mașină la schimb</p>
+</header>
 
-    <section id="servicii">
-        <h2>Servicii oferite</h2>
-        <ul>
-            <li>Constatări daune RCA</li>
-            <li>Reparații complete auto</li>
-            <li>Tractare gratuită</li>
-            <li>Mașină gratuită la schimb pe perioada reparației</li>
-            <li>Fără CASCO</li>
-        </ul>
-    </section>
+<nav>
+  <a href="#despre-noi">Despre noi</a>
+  <a href="#servicii">Servicii</a>
+  <a href="#programare">Programare</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>📍 Str. Principală nr. 673B, Tătărani, Bărcănești</p>
-        <p>📞 0726 287 565</p>
-        <p>✉️ avantajserviceinsurance@gmail.com</p>
-        <iframe src="https://maps.google.com/maps?q=T%C4%83t%C4%83rani%20B%C4%83rc%C4%83ne%C8%99ti&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;" allowfullscreen=""></iframe>
-    </section>
+<main>
 
-    <footer>
-        <p>&copy; 2025 Avantaj Service Insurance. Toate drepturile rezervate.</p>
-    </footer>
+  <section id="despre-noi">
+    <h2>Despre noi</h2>
+    <p>
+      Avantaj Service Insurance este un service auto profesionist cu experiență în daune auto, oferind servicii complete de reparații, constatări daune, tractare gratuită și mașină la schimb pe perioada reparației.
+      Ne mândrim cu rapiditate, transparență și calitate în toate lucrările noastre.
+    </p>
+  </section>
+
+  <section id="servicii">
+    <h2>Serviciile noastre</h2>
+    <ul>
+      <li>Constatări daune auto</li>
+      <li>Reparații caroserie și vopsitorie</li>
+      <li>Tractare gratuită</li>
+      <li>Mașină gratuită la schimb pe perioada reparației</li>
+      <li>Consultanță și asistență în daune</li>
+    </ul>
+  </section>
+
+  <section id="programare">
+    <h2>Programare online</h2>
+    <form id="programareForm" action="https://formsubmit.co/avantajserviceinsurance@gmail.com" method="POST">
+      <label for="nume">Nume complet:</label>
+      <input type="text" id="nume" name="nume" required />
+
+      <label for="telefon">Telefon:</label>
+      <input type="tel" id="telefon" name="telefon" pattern="[0-9]{10}" placeholder="ex: 0726123456" required />
+
+      <label for="marca">Marca mașinii:</label>
+      <input type="text" id="marca" name="marca" required />
+
+      <label for="data">Data dorită:</label>
+      <input type="date" id="data" name="data" required />
+
+      <label for="mesaj">Mesaj suplimentar:</label>
+      <textarea id="mesaj" name="mesaj" rows="4"></textarea>
+
+      <button type="submit">Trimite programare</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p><strong>Adresă:</strong> Comuna Bărcănești, sat Tătărani, str. Principală nr. 673B</p>
+      <p><strong>Program:</strong> Luni - Vineri, 08:00 - 17:00</p>
+      <p><strong>Telefon:</strong> <a href="tel:+40726287565">0726 287 565</a></p>
+      <p><strong>Telefon / WhatsApp:</strong> <a href="tel:+40768524559">0768 524 559</a></p>
+      <p><strong>Email:</strong> <a href="mailto:avantajserviceinsurance@gmail.com">avantajserviceinsurance@gmail.com</a></p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2838.519572820931!2d26.019877015834203!3d44.78536817909804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40bb7f2883f59b4d%3A0x420961a4e7a6f7c0!2sComuna%20B%C4%83rc%C4%83ne%C8%99ti%2C%20T%C4%83t%C4%83rani%2C%20Strada%20Principal%C4%83%20673B!5e0!3m2!1sro!2sro!4v1687943154000!5m2!1sro!2sro"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="recenzii" class="reviews">
+    <h2>Recenzii clienți</h2>
+    <blockquote>„Servicii rapide și profesionale. Recomand cu încredere!” – Maria P.</blockquote>
+    <blockquote>„Am primit mașină la schimb gratuită și reparații excelente.” – Andrei M.</blockquote>
+    <blockquote>„Personal amabil și prețuri corecte. Mulțumit de rezultat.” – Elena D.</blockquote>
+  </section>
+
+</main>
+
+<!-- Buton WhatsApp pentru ambele numere -->
+<a
+  href="https://wa.me/40726287565"
+  target="_blank"
+  class="whatsapp-button"
+  title="Contact WhatsApp 0726 287 565"
+  aria-label="Contact WhatsApp 0726 287 565"
+  >
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
+
+<a
+  href="https://wa.me/40768524559"
+  target="_blank"
+  class="whatsapp-button"
+  style="right: 90px; background-color:#128C7E;"
+  title="Contact WhatsApp 0768 524 559"
+  aria-label="Contact WhatsApp 0768 524 559"
+  >
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
+
 </body>
 </html>
